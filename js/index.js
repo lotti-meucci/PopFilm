@@ -6,9 +6,17 @@ const menuBtn = document.querySelector('#menu-btn')
 const closeMenuBtn = document.querySelector('#close-menu-btn')
 const phoneIcons = document.querySelectorAll('.i-phone')
 const waIcons = document.querySelectorAll('.i-wa')
+const mailIcons = document.querySelectorAll('.i-mail')
+const fbIcons = document.querySelectorAll('.i-fb')
+const igIcons = document.querySelectorAll('.i-ig')
+const langBtns = document.querySelectorAll('.lang-btn')
+const navLinks = nav.querySelectorAll('a')
 
-const phone = "3338104819"
+const phone = "3338104818"
+localStorage.lang ??= 'it'
+document.documentElement.lang = localStorage.lang
 addEventListener('resize', closeMenu)
+addEventListener('hashchange', closeMenu)
 menuBtn.addEventListener('click', openMenu)
 closeMenuBtn.addEventListener('click', closeMenu)
 
@@ -38,11 +46,32 @@ tippy('.i-phone',
 	animation: 'shift-away',
 })
 
+for (const btn of langBtns)
+{
+	btn.addEventListener("click", () =>
+	{
+		localStorage.lang = btn.getAttribute('data-type')
+		document.documentElement.lang = localStorage.lang
+	})
+}
+
+for (const a of navLinks)
+	a.addEventListener('click', () => location.hash = '')
+
 for (const icon of phoneIcons)
 	icon.addEventListener('click', () => open('tel:+39' + phone, '_self'))
 
 for (const icon of waIcons)
 	icon.addEventListener('click', () => open('https://wa.me/39' + phone, '_self'))
+
+for (const icon of mailIcons)
+	icon.addEventListener('click', () => open('mailto:barletti.leonardo@itismeucci.com', '_self'))
+
+for (const icon of fbIcons)
+	icon.addEventListener('click', () => open('https://facebook.com', '_self'))
+
+for (const icon of igIcons)
+	icon.addEventListener('click', () => open('https://instagram.com', '_self'))
 
 function openMenu()
 {

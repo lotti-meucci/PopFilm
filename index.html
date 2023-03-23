@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<meta name="theme-color" content="#EA0202">
-		<title>GSM Noleggi</title>
+		<meta name="theme-color" content="#FFD404">
+		<title>PopFilm</title>
 		<link rel="stylesheet" href="./css/index.css">
+		<link rel="icon" href="./res/logo.png">
 		<script src="https://unpkg.com/@popperjs/core@2" defer></script>
 		<script src="https://unpkg.com/tippy.js@6" defer></script>
 		<script src="./js/index.js" defer></script>
@@ -24,12 +25,28 @@
 					<a id="logo-link" href="./index.html">
 						<img class="logo" src="./res/logo.png" alt="Logo">
 					</a>
-					<button id="menu-btn" class="text-btn">&#9776;</button>
+					<a href="./index.html" class="hidden-link">PopFilm</a>
+					<div class="header-btns">
+						<img
+							lang="en"
+							data-type="it"
+							class="lang-btn"
+							src="./res/italy.svg"
+							alt="Bandiera italia"
+						>
+						<img
+							lang="it"
+							data-type="en"
+							class="lang-btn"
+							src="./res/uk.svg"
+							alt="Bandiera UK"
+						>
+						<button id="menu-btn" class="text-btn">&#9776;</button>
+					</div>
 				</header>
 				<div id="content-frame">
 					<div id="content" class="container">
-
-						<div>
+						<div id="home">
 							<div class="logo-block">
 								<div class="logo-container">
 									<img
@@ -40,42 +57,86 @@
 								</div>
 							</div>
 							<div id="top-text" class="text-block encapsulated-6">
-								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga nobis repellat,
-									quisquam quo repellendus, accusamus aperiam fugit quos fugiat similique
-									perspiciatis nemo dolorum voluptatum, ipsa ullam voluptates sit. Perspiciatis,
-									distinctio.
-								</p>
-								<p>
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum et iste,
-									voluptas beatae deleniti odit consequatur obcaecati excepturi accusamus.
-									Minus id cupiditate quia earum laborum animi similique, natus atque? Natus!
-								</p>
-								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore alias quasi
-									doloribus, eveniet tempore vero possimus, nulla itaque eum accusamus dolor
-									obcaecati deleniti eius officia voluptatum, iste autem quidem architecto?
-								</p>
+								<!--
+									PER FARE I TESTI MULTI LINGUA!!!
+									quelli con lang="it" si mostrano solo in italiano;
+									quelli con lang="en" solo in inglese.
+
+									potete cambiare lingua premendo il tasto in alto accanto all'hamburger
+								-->
+								<div>
+									<p lang="it">
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano,
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano,
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano.
+									</p>
+									<p lang="en">
+										Text in english, Text in english, Text in english, Text in english,
+										Text in english, Text in english, Text in english, Text in english,
+										Text in english, Text in english, Text in english, Text in english,
+									</p>
+								</div>
+								<div>
+									<p lang="it">
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano,
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano,
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano.
+									</p>
+									<p lang="en">
+										Text in english, Text in english, Text in english, Text in english,
+										Text in english, Text in english, Text in english, Text in english,
+										Text in english, Text in english, Text in english, Text in english,
+									</p>
+								</div>
+								<div>
+									<p lang="it">
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano,
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano,
+										Testo in italiano, Testo in italiano, Testo in italiano, Testo in italiano.
+									</p>
+									<p lang="en">
+										Text in english, Text in english, Text in english, Text in english,
+										Text in english, Text in english, Text in english, Text in english,
+										Text in english, Text in english, Text in english, Text in english,
+									</p>
+								</div>
 							</div>
 							<div>
 								<div class="links-container row gx-3 gx-sm-4 gy-2 gy-sm-0 .align-items-center">
 									<div class="col"><i class="bi bi-geo-alt-fill i-maps"></i></div>
 									<div class="col"><i class="bi bi-telephone i-phone"></i></div>
 									<div class="col"><i class="bi bi-whatsapp i-wa"></i></div>
-									<div class="col"><i class="bi bi-envelope-at-fill"></i></div>
-									<div class="col"><i class="bi bi-facebook"></i></div>
-									<div class="col"><i class="bi bi-instagram"></i></div>
+									<div class="col"><i class="bi bi-envelope-at-fill i-mail"></i></div>
+									<div class="col"><i class="bi bi-facebook i-fb"></i></div>
+									<div class="col"><i class="bi bi-instagram i-ig"></i></div>
 								</div>
 							</div>
 						</div>
 
 						<div class="separator">
-							<div class="dashed-strip"></div>
-							<div class="car-container">
-								<div class="car"></div>
-							</div>
+							<img src="./res/separator.png" alt="">
 						</div>
 
+						<div id="section2">
+							<!-- TODO: mettere roba (prendete spunto sezione sopra) -->
+							<!--
+								con le classi encapsuleted-1, encapsuleted-2, ..., encapsuleted-6
+								potete scegliere la larghezza massima di un div (ad esempio una sezione),
+								più il numero è basso (da 1 a 6), più è piccola questa larghezza.
+
+								!!!  Il padding è a vostra discrizione.  !!!
+							-->
+							Sezione 2
+						</div>
+
+						<div class="separator">
+							<img src="./res/separator.png" alt="">
+						</div>
+
+						<div id="section3">
+							<!-- TODO: mettere roba -->
+							Sezione 3
+						</div>
 					</div>
 				</div>
 			</main>
@@ -86,21 +147,9 @@
 				<button id="close-menu-btn" class="text-btn">&times;</button>
 			</header>
 			<nav>
-				<div><a href="">Home</a></div>
-				<div><a href="">Cock Af</a></div>
-				<div><a href="">Balls</a></div>
-				<div><a href="">Home</a></div>
-				<div><a href="">Cock Af</a></div>
-				<div><a href="">Balls</a></div>
-				<div><a href="">Home</a></div>
-				<div><a href="">Cock Af</a></div>
-				<div><a href="">Balls</a></div>
-				<div><a href="">Home</a></div>
-				<div><a href="">Cock Af</a></div>
-				<div><a href="">Balls</a></div>
-				<div><a href="">Home</a></div>
-				<div><a href="">Cock Af</a></div>
-				<div><a href="">Balls</a></div>
+				<div><a href="#home">Home</a></div>
+				<div><a href="#section2">Sezione 2</a></div>
+				<div><a href="#section3">Sezione 3</a></div>
 			</nav>
 		</aside>
 	</body>

@@ -2,7 +2,7 @@
 
 * {
   scroll-behavior: smooth;
-  scrollbar-color: var(--logo-red) var(--first-color);
+  scrollbar-color: var(--logo-yellow) var(--first-color);
 }
 
 aside * {
@@ -18,23 +18,23 @@ aside * {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--logo-red);
+  background: var(--logo-yellow);
 }
 
 .menu-open ::-webkit-scrollbar-thumb {
-  background: var(--logo-red-to-first-1);
+  background: var(--logo-yellow-to-first-1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--logo-red);
+  background: var(--logo-yellow);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--logo-red-to-first-1);
+  background: var(--logo-yellow-to-first-1);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: var(--logo-red-to-first-2);
+  background: var(--logo-yellow-to-first-2);
 }
 
 aside ::-webkit-scrollbar {
