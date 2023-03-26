@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- questo lang qua non va toccato -->
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="theme-color" content="#FFD404">
+		<title>PopFilm</title>
+		<link rel="stylesheet" href="./css/index.css">
+		<link rel="icon" href="./res/logo.png">
+		<script src="https://unpkg.com/@popperjs/core@2" defer></script>
+		<script src="https://unpkg.com/tippy.js@6" defer></script>
+		<script src="./js/index.js" defer></script>
+	</head>
+	<body>
+		<template id="t-maps">
+			<iframe
+				src="https://maps.google.com/maps?q=ITIS+Meucci+Firenze&output=embed"
+				class="embedded-maps"
+			></iframe>
+		</template>
+
+		<div id="main-filter">
+			<main>
+				<header>
+					<a id="logo-link" href="./index.html">
+						<img class="logo" src="./res/logo.png" alt="Logo">
+					</a>
+					<a href="./index.html" class="hidden-link">PopFilm</a>
+					<div class="header-btns">
+						<img
+							lang="en"
+							data-type="it"
+							class="lang-btn"
+							src="./res/italy.svg"
+							alt="Bandiera italia"
+						>
+						<img
+							lang="it"
+							data-type="en"
+							class="lang-btn"
+							src="./res/uk.svg"
+							alt="Bandiera UK"
+						>
+						<button id="menu-btn" class="text-btn">&#9776;</button>
+					</div>
+				</header>
+				<div id="content-frame">
+					<div id="content" class="container">
+						<div id="home">
+							<div class="logo-block">
+								<div class="logo-container">
+									<img
+										class="logo encapsulated-1"
+										src="./res/logo.png"
+										alt="Logo"
+									>
+								</div>
+							</div>
+							<div id="top-text" class="text-block encapsulated-6">
+								<!--
+									PER FARE I TESTI MULTI LINGUA!!!
+									quelli con lang="it" si mostrano solo in italiano;
+									quelli con lang="en" solo in inglese.
+
+									potete cambiare lingua premendo il tasto in alto accanto all'hamburger
+								-->
+								<div>
+									<p lang="it" style="text-align: center;">
+										Noi siamo PoPFilm, guarda un film del nostro catalogo 
+										mentre noi portiamo i popcorn direttamente a casa tua!
+									</p>
+									<p lang="en" style="text-align: center;">	
+										We are PoPFilm, watch a film from our catalog 
+										while we deliver popcorn directly to your home!
+									</p>
+								</div>
+							</div>
+							<div>
+								<div class="links-container row gx-3 gx-sm-4 gy-2 gy-sm-0 .align-items-center">
+									<div class="col"><i class="bi bi-geo-alt-fill i-maps"></i></div>
+									<div class="col"><i class="bi bi-telephone i-phone"></i></div>
+									<div class="col"><i class="bi bi-whatsapp i-wa"></i></div>
+									<div class="col"><i class="bi bi-envelope-at-fill i-mail"></i></div>
+									<div class="col"><i class="bi bi-facebook i-fb"></i></div>
+									<div class="col"><i class="bi bi-instagram i-ig"></i></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="separator" >
+							<img src="./res/separator.png" alt="">
+						</div>
+
+						<div id="section2" class="text-block encapsulated-6">
+							<!-- TODO: mettere roba (prendete spunto sezione sopra) -->
+							<!--
+								con le classi encapsuleted-1, encapsuleted-2, ..., encapsuleted-6
+								potete scegliere la larghezza massima di un div (ad esempio una sezione),
+								più il numero è basso (da 1 a 6), più è piccola questa larghezza.
+
+								!!!  Il padding è a vostra discrizione.  !!!
+							-->
+							<h3 lang="it">Chi siamo noi</h3>
+							<p lang="it">
+								PopFilm è un'attività iniziata da 5 ragazzi fiorentini per incentivare la riscoperta di film retrò. <br>
+								Nel nostro sito sarà possibile acquistare i popcorn con al loro interno un codice che, attivato sempre
+								qui, sarà possibile avere a noleggio per una settimana un film a vostra scelta dal nostro catalogo.
+							</p>
+
+							<h3 lang="en">Who we are</h3>
+							<p lang="en">
+								PopFilm is an activity started by 5 Florentine boys to encourage the rediscovery of retro films.
+								On our site it will be possible to buy popcorn with a code inside which is always activated
+								on our site, it will be possible to rent a film of your choice from our catalog for a week.
+							</p>
+						</div>
+
+						<div class="separator">
+							<img src="./res/separator.png" alt="">
+						</div>
+
+						<div id="section3" class="text-block encapsulated-6">
+							<h3 lang="it">Dove spediamo</h3>
+							<p lang="it">
+								Essendo ancora un'impresa piccola riusciremo a garantire i nostri servizi di spedizione soltanto
+								nella provincia di Firenze, ma cercheremo di espanderci il prima possibile in tutta la Toscana.
+							</p>
+
+							<h3 lang="en">Where we ship</h3>
+							<p lang="en">
+								Being still a small company we will be able to guarantee our shipping services only
+								in the province of Florence, but we will try to expand as soon as possible throughout Tuscany.
+							</p>
+						</div>
+
+						<div class="separator">
+							<img src="./res/separator.png" alt="">
+						</div>
+
+						<div id="section4" class="text-block encapsulated-6">
+							<h3>FAQ</h3>
+							<ul lang="it">
+								<li>
+									Quali tipi di popcorn offrite?
+									<ul>
+										<li>
+											R: Offriamo vari tipi di popcorn tra cui salati, dolci, al burro, al caramello e piccanti.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Come vengono consegnati i popcorn e i film noleggiati? 
+									<ul>
+										<li>
+											R: I popcorn vengono consegnati in contenitori sigillati per garantire la freschezza e il sapore.
+											I film noleggiati possono essere scaricati direttamente dal nostro sito web.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Quali sono i metodi di pagamento accettati?
+									<ul>
+										<li>
+											R: Accettiamo pagamenti con carta di credito e PayPal.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Cosa succede se il mio ordine di popcorn è danneggiato durante la spedizione?
+									<ul>
+										<li>
+											R: Se il tuo ordine di popcorn è danneggiato durante la spedizione, 
+											ti preghiamo di contattarci immediatamente per risolvere il problema.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Cosa succede se il film che ho noleggiato ha problemi di riproduzione?
+									<ul>
+										<li>
+											R: Se hai problemi di riproduzione con un film noleggiato, 
+											ti preghiamo di contattarci immediatamente per risolvere il problema.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Posso restituire i popcorn o i film?
+									<ul>
+										<li>
+											R: Non accettiamo resi di popcorn o film a meno che non ci sia un problema con il prodotto. 
+											Se hai problemi con un ordine, ti preghiamo di contattarci per trovare una soluzione.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Quali sono le opzioni di contatto disponibili se ho domande o problemi?
+									<ul>
+										<li>
+											R: Siamo disponibili per rispondere alle tue domande o ai tuoi problemi tramite email o telefono. 
+											I nostri contatti sono disponibili sul nostro sito web.
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+							<ul lang="en">
+								<li>
+									What types of popcorn do you offer?
+									<ul>
+										<li>
+											A: We offer various types of popcorn, including salted, sweet, buttered, caramel, and spicy.
+										</li>
+									</ul>
+								</li>
+								<li>
+									How are the popcorn and rented films delivered?
+									<ul>
+										<li>
+											A: The popcorn is delivered in sealed containers to ensure freshness and taste. 
+											Rented films can be downloaded directly from our website.
+										</li>
+									</ul>
+								</li>
+								<li>
+									What payment methods do you accept?
+									<ul>
+										<li>
+											A: We accept credit card and PayPal payments.
+										</li>
+									</ul>
+								</li>
+								<li>
+									What happens if my popcorn order is damaged during shipping?
+									<ul>
+										<li>
+											A: If your popcorn order is damaged during shipping, 
+											please contact us immediately to resolve the issue.
+										</li>
+									</ul>
+								</li>
+								<li>
+									What happens if the rented film has playback issues?
+									<ul>
+										<li>
+											A: If you experience playback issues with a rented film, 
+											please contact us immediately to resolve the issue.
+										</li>
+									</ul>
+								</li>
+								<li>
+									Can I return the popcorn or rented films?
+									<ul>
+										<li>
+											A: We do not accept returns of popcorn or rented films unless there is an issue with the product. 
+											If you have an issue with an order, please contact us to find a solution.
+										</li>
+									</ul>
+								</li>
+								<li>
+									What contact options are available if I have questions or issues?
+									<ul>
+										<li>
+											A: We are available to answer your questions or resolve issues through email or phone. 
+											Our contact information is available on our website.
+										</li>
+									</ul>
+								</li>
+							</ul>							
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<aside>
+			<header>
+				<button id="close-menu-btn" class="text-btn">&times;</button>
+			</header>
+			<nav>
+				<div><a href="#home">Home</a></div>
+				<div><a href="#section2">Chi siamo</a></div>
+				<div><a href="#section3">Dove spediamo</a></div>
+				<div><a href="#section4">FAQ</a></div>
+			</nav>
+		</aside>
+	</body>
+</html>
