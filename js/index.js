@@ -12,7 +12,7 @@ const igIcons = document.querySelectorAll('.i-ig')
 const langBtns = document.querySelectorAll('.lang-btn')
 const navLinks = nav.querySelectorAll('a')
 
-const phone = "3338104818"
+const phone = "3396356819"
 localStorage.lang ??= 'it'
 document.documentElement.lang = localStorage.lang
 addEventListener('resize', closeMenu)
